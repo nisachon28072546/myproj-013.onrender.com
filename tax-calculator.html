@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>คำนวณภาษี (if-else)</title>
+</head>
+<body>
+  <h2>โปรแกรมคำนวณภาษีมูลค่าเพิ่ม 7%</h2>
+  <label>กรอกราคาสินค้า (บาท):</label><br>
+  <input type="number" id="priceInput" min="0"><br>
+  <button onclick="calculateVAT()">คำนวณ</button>
+  <div id="vatResult"></div>
+
+  <script>
+    function calculateVAT() {
+      const price = parseFloat(document.getElementById('priceInput').value);
+      const result = document.getElementById('vatResult');
+
+      if (!isNaN(price) && price >= 0) {
+        const vat = price * 0.07;
+        const total = price + vat;
+        const msg = `ราคาสินค้า: ${price.toFixed(2)} บาท | ภาษี 7%: ${vat.toFixed(2)} บาท | ราคารวม: ${total.toFixed(2)} บาท`;
+
+        result.innerHTML = `<p style="color: green;">${msg}</p>`;
+        console.log("✅ " + msg);
+      } else {
+        const msg = "⚠️ กรุณากรอกราคาที่ถูกต้อง (0 บาทขึ้นไป)";
+        result.innerHTML = `<p style="color: red;">${msg}</p>`;
+        console.log(msg);
+      }
+    }
+  </script>
+</body>
+</html>

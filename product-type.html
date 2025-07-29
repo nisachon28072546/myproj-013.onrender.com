@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>ประเภทสินค้า (switch-case)</title>
+</head>
+<body>
+  <h2>โปรแกรมแสดงประเภทสินค้า</h2>
+  <label>กรอกรหัสสินค้า (1-5):</label><br>
+  <input type="number" id="productInput" min="1" max="5"><br>
+  <button onclick="showProductType()">ดูประเภทสินค้า</button>
+  <div id="productResult"></div>
+
+  <script>
+    function showProductType() {
+      const code = parseInt(document.getElementById('productInput').value);
+      const result = document.getElementById('productResult');
+
+      let type;
+
+      switch (code) {
+        case 1: type = "อาหารสด"; break;
+        case 2: type = "เครื่องดื่ม"; break;
+        case 3: type = "เครื่องใช้ไฟฟ้า"; break;
+        case 4: type = "เครื่องแต่งกาย"; break;
+        case 5: type = "ของใช้ในบ้าน"; break;
+        default: type = "⚠️ ไม่พบรหัสสินค้า";
+      }
+
+      result.innerHTML = `<p>${type}</p>`;
+      console.log("📦 ประเภทสินค้า: " + type);
+    }
+  </script>
+</body>
+</html>

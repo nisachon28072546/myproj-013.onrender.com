@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าแรก - เครื่องคำนวณแคลอรี่ที่ต้องการต่อวัน</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(to right, #fefce8, #fef08a);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            gap: 2rem;
+        }
+        .card {
+            animation: fadeIn 0.8s ease-in-out;
+            max-width: 48rem;
+            width: 100%;
+            aspect-ratio: 3 / 1;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.95); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="w-full max-w-4xl text-center mb-8">
+        <h1 class="text-5xl font-bold text-yellow-600 flex items-center justify-center gap-2">
+            <span>📘</span> รายการบทเรียน
+        </h1>
+    </div>
+    <div class="flex flex-col md:flex-row gap-6 w-full max-w-5xl">
+        <div class="card bg-white rounded-2xl shadow-xl p-10 text-center flex flex-col justify-center items-center flex-1">
+            <h1 class="text-3xl font-bold text-yellow-600 mb-6">บทที่ 2: คำสั่ง if-else</h1>
+            <p class="text-gray-600 mb-8 text-lg max-w-2xl">ตัวอย่างการใช้ if-else ในการตัดสินใจ</p>
+            <a href="menu1.html" class="btn inline-block bg-yellow-600 text-white py-4 px-8 rounded-lg hover:bg-yellow-700 transition duration-300 text-lg font-semibold">ดูโปรแกรม</a>
+        </div>
+        <div class="card bg-white rounded-2xl shadow-xl p-10 text-center flex flex-col justify-center items-center flex-1">
+            <h1 class="text-3xl font-bold text-yellow-600 mb-6">บทที่ 3: DOM and Event</h1>
+            <p class="text-gray-600 mb-8 text-lg max-w-2xl">ตัวอย่างการใช้ DOM และ Event ในการจัดการหน้าเว็บ</p>
+            <a href="menu2.html" class="btn inline-block bg-yellow-600 text-white py-4 px-8 rounded-lg hover:bg-yellow-700 transition duration-300 text-lg font-semibold">ดูโปรแกรม</a>
+        </div>
+    </div>
+    <div class="card bg-white rounded-2xl shadow-xl p-10 text-center flex flex-col justify-center items-center">
+        <h1 class="text-3xl font-bold text-yellow-600 mb-6">โปรแกรมที่ออกแบบ</h1>
+        <p class="text-gray-600 mb-8 text-lg max-w-2xl">โปรแกรมคำนวณปริมาณแคลอรี่</p>
+        <a href="Ch3_Calorie.html" class="btn inline-block bg-yellow-600 text-white py-4 px-8 rounded-lg hover:bg-yellow-700 transition duration-300 text-lg font-semibold">เริ่มคำนวณแคลอรี่</a>
+    </div>
+</body>
+</html>

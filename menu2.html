@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บทที่ 3: DOM and Event</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(to right, #fefce8, #fef08a);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            gap: 2rem;
+        }
+        .card {
+            animation: fadeIn 0.8s ease-in-out;
+            max-width: 48rem;
+            width: 100%;
+            aspect-ratio: 3 / 1;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.95); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="w-full max-w-4xl text-center mb-8">
+        <h1 class="text-5xl font-bold text-yellow-600 flex items-center justify-center gap-2">
+            <span>📘</span> บทที่ 3: DOM and Event
+        </h1>
+        <div class="flex justify-start mt-4">
+            <a href="index.html" class="btn inline-block bg-gray-600 text-white py-4 px-8 rounded-lg hover:bg-gray-700 transition duration-300 text-lg font-semibold">กลับไปหน้าแรก</a>
+        </div>
+        <hr class="border-gray-300 mt-4">
+    </div>
+    <div class="w-full max-w-4xl grid grid-cols-2 gap-4">
+        <div class="card bg-white rounded-2xl shadow-xl p-10 text-center flex flex-col justify-center items-center">
+            <h1 class="text-3xl font-bold text-yellow-600 mb-6">บทที่ 3: Filering</h1>
+            <p class="text-gray-600 mb-8 text-lg max-w-2xl">ระบบค้นหารายชื่อ</p>
+            <div class="flex gap-4">
+                <a href="ch3-Filering.html" class="btn inline-block bg-yellow-600 text-white py-4 px-8 rounded-lg hover:bg-yellow-700 transition duration-300 text-lg font-semibold">ดูโปรแกรม</a>
+            </div>
+        </div>
+        <div class="card bg-white rounded-2xl shadow-xl p-10 text-center flex flex-col justify-center items-center">
+            <h1 class="text-3xl font-bold text-yellow-600 mb-6">บทที่ 3: Shopping</h1>
+            <p class="text-gray-600 mb-8 text-lg max-w-2xl">ใบสั่งซ้ือสินค้า</p>
+            <div class="flex gap-4">
+                <a href="ch3-Shopping.html" class="btn inline-block bg-yellow-600 text-white py-4 px-8 rounded-lg hover:bg-yellow-700 transition duration-300 text-lg font-semibold">ดูโปรแกรม</a>
+            </div>
+        </div>
+        <div class="card bg-white rounded-2xl shadow-xl p-10 text-center flex flex-col justify-center items-center">
+            <h1 class="text-3xl font-bold text-yellow-600 mb-6">บทที่ 3: to-do list</h1>
+            <p class="text-gray-600 mb-8 text-lg max-w-2xl">To-Do List</p>
+            <div class="flex gap-4">
+                <a href="ch3-to-do list.html" class="btn inline-block bg-yellow-600 text-white py-4 px-8 rounded-lg hover:bg-yellow-700 transition duration-300 text-lg font-semibold">ดูโปรแกรม</a>
+            </div>
+        </div>
+        <div class="card bg-white rounded-2xl shadow-xl p-10 text-center flex flex-col justify-center items-center">
+            <h1 class="text-3xl font-bold text-yellow-600 mb-6">บทที่ 3: Inline</h1>
+            <p class="text-gray-600 mb-8 text-lg max-w-2xl">แบบฝึกหัดที่ 1</p>
+            <div class="flex gap-4">
+                <a href="ch3-inline.html" class="btn inline-block bg-yellow-600 text-white py-4 px-8 rounded-lg hover:bg-yellow-700 transition duration-300 text-lg font-semibold">ดูโปรแกรม</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
